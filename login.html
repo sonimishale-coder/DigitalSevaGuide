@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Digital Seva Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <nav>
+
+            <div>
+                <a href="index.html">
+                    Digital Seva Guide
+                </a>
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#modules">
+                        Modules
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Login Section -->
+
+    <section>
+
+    <h1>
+        Welcome to Digital Seva Guide
+    </h1>
+
+    <p>
+        Login to access the digital learning resources.
+    </p>
+
+
+        <form id="loginForm">
+
+            <div>
+
+                <label for="username">
+                    Username or Email
+                </label>
+
+                <br>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter username or email"
+                    required
+                >
+
+            </div>
+
+
+            <br>
+
+
+            <div>
+
+                <label for="password">
+                    Password
+                </label>
+
+                <br>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+            </div>
+
+
+            <br>
+
+
+            <div>
+
+                <input
+                    type="checkbox"
+                    id="remember"
+                    name="remember"
+                >
+
+                <label for="remember">
+                    Remember me
+                </label>
+
+            </div>
+
+
+            <br>
+
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+
+        <p id="loginMessage"></p>
+
+
+        <p>
+            <a href="index.html">
+                ← Back to Home
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            Digital Seva Guide
+        </p>
+
+        <p>
+            Training and Awareness on DigiLocker, Aadhaar & PAN Services
+        </p>
+
+        <p>
+            © 2026 Digital Seva Guide
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        const loginForm = document.getElementById("loginForm");
+
+        const loginMessage = document.getElementById("loginMessage");
+
+
+        loginForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            const username =
+                document.getElementById("username").value;
+
+            const password =
+                document.getElementById("password").value;
+
+
+            if (username !== "" && password !== "") {
+
+                loginMessage.textContent =
+                    "Login successful!";
+
+                loginMessage.style.color = "green";
+
+            }
+
+            else {
+
+                loginMessage.textContent =
+                    "Please enter username and password.";
+
+                loginMessage.style.color = "red";
+
+            }
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

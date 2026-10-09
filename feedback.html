@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback | Digital Seva Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <nav>
+
+            <div>
+                <a href="index.html">
+                    Digital Seva Guide
+                </a>
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#modules">
+                        Modules
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        Login
+                    </a>
+                </li>
+
+                <li>
+                    <a href="feedback.html">
+                        Feedback
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Feedback Introduction -->
+
+    <section>
+
+        <h1>
+            Training Feedback
+        </h1>
+
+        <p>
+            Your feedback helps us understand how useful the
+            Digital Seva Guide training and learning resources are.
+        </p>
+
+    </section>
+
+
+    <!-- Feedback Form -->
+
+    <section>
+
+        <h2>
+            Give Your Feedback
+        </h2>
+
+        <form id="feedbackForm">
+
+
+            <!-- Name -->
+
+            <div>
+
+                <label for="name">
+                    Name
+                </label>
+
+                <br>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <br>
+
+
+            <!-- Email -->
+
+            <div>
+
+                <label for="email">
+                    Email
+                </label>
+
+                <br>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                >
+
+            </div>
+
+
+            <br>
+
+
+            <!-- Module -->
+
+            <div>
+
+                <label for="module">
+                    Which module did you find most useful?
+                </label>
+
+                <br>
+
+                <select id="module" name="module" required>
+
+                    <option value="">
+                        Select a module
+                    </option>
+
+                    <option value="DigiLocker">
+                        DigiLocker Services
+                    </option>
+
+                    <option value="Aadhaar">
+                        Aadhaar Services
+                    </option>
+
+                    <option value="PAN">
+                        PAN Services
+                    </option>
+
+                    <option value="Online Safety">
+                        Online Safety
+                    </option>
+
+                    <option value="Training">
+                        Training & Learning Resources
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <br>
+
+
+            <!-- Rating -->
+
+            <div>
+
+                <label for="rating">
+                    How useful was the training?
+                </label>
+
+                <br>
+
+                <select id="rating" name="rating" required>
+
+                    <option value="">
+                        Select rating
+                    </option>
+
+                    <option value="Excellent">
+                        Excellent
+                    </option>
+
+                    <option value="Very Good">
+                        Very Good
+                    </option>
+
+                    <option value="Good">
+                        Good
+                    </option>
+
+                    <option value="Average">
+                        Average
+                    </option>
+
+                    <option value="Needs Improvement">
+                        Needs Improvement
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <br>
+
+
+            <!-- Understanding -->
+
+            <div>
+
+                <label>
+                    Do you understand digital services better
+                    after the training?
+                </label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="yes"
+                    name="understanding"
+                    value="Yes"
+                    required
+                >
+
+                <label for="yes">
+                    Yes
+                </label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="somewhat"
+                    name="understanding"
+                    value="Somewhat"
+                >
+
+                <label for="somewhat">
+                    Somewhat
+                </label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="no"
+                    name="understanding"
+                    value="No"
+                >
+
+                <label for="no">
+                    No
+                </label>
+
+            </div>
+
+
+            <br>
+
+
+            <!-- Comments -->
+
+            <div>
+
+                <label for="comments">
+                    Suggestions or Comments
+                </label>
+
+                <br>
+
+                <textarea
+                    id="comments"
+                    name="comments"
+                    rows="5"
+                    cols="40"
+                    placeholder="Write your feedback here..."
+                ></textarea>
+
+            </div>
+
+
+            <br>
+
+
+            <!-- Submit -->
+
+            <button type="submit">
+                Submit Feedback
+            </button>
+
+
+        </form>
+
+
+        <!-- Message -->
+
+        <p id="feedbackMessage"></p>
+
+    </section>
+
+
+    <!-- Back to Home -->
+
+    <section>
+
+        <a href="index.html">
+            ← Back to Home
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            Digital Seva Guide
+        </p>
+
+        <p>
+            Training and Awareness on DigiLocker, Aadhaar & PAN Services
+        </p>
+
+        <p>
+            © 2026 Digital Seva Guide
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        const feedbackForm =
+            document.getElementById("feedbackForm");
+
+        const feedbackMessage =
+            document.getElementById("feedbackMessage");
+
+
+        feedbackForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            feedbackMessage.textContent =
+                "Thank you! Your feedback has been submitted successfully.";
+
+            feedbackMessage.style.color = "green";
+
+
+            feedbackForm.reset();
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

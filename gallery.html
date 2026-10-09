@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Activity Gallery | Digital Seva Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .gallery-intro {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.gallery-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    overflow: visible;
+}
+
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+}
+
+@media (max-width: 650px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
+        .gallery-card h3 {
+            margin-top: 15px;
+        }
+
+        .gallery-card p {
+            line-height: 1.6;
+        }
+
+        .back-home {
+            text-align: center;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Digital Seva Guide</h1>
+        <p>Training and Awareness on Digital Government Services</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#modules">Modules</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <section class="gallery-intro">
+        <h2>Project Activity Photographs</h2>
+
+        <p>
+            This gallery presents photographs from the community training
+            sessions conducted as part of the Community Engagement Project
+            on DigiLocker, Aadhaar, PAN Services and Online Safety.
+        </p>
+
+        <p>
+            The training activities aimed to improve awareness of digital
+            government services, demonstrate how to find official online
+            services, and promote safe use of digital platforms.
+        </p>
+    </section>
+
+    <main class="gallery-container">
+
+        <!-- DigiLocker Training -->
+        <div class="gallery-card">
+            <img src="images/digilocker-training.jpg.jpeg"
+                 alt="DigiLocker training session">
+
+            <h3>DigiLocker Awareness and Training</h3>
+
+            <p>
+                Participant were introduced to DigiLocker and guided
+                through the platform to understand how eligible digital
+                documents can be accessed. The session also covered
+                the importance of keeping account information secure.
+            </p>
+        </div>
+
+        <!-- Aadhaar Training -->
+        <div class="gallery-card">
+            <img src="images/aadhaar-training.jpg.jpeg"
+                 alt="Aadhaar services training session">
+
+            <h3>Aadhaar Services Awareness</h3>
+
+            <p>
+                The training introduced participants to the official
+                UIDAI website and available Aadhaar-related online
+                services. Guidance was provided on identifying official
+                services and protecting personal information.
+            </p>
+        </div>
+
+        <!-- PAN Training -->
+        <div class="gallery-card">
+            <img src="images/pan-training.jpg.jpeg"
+                 alt="PAN services training session">
+
+            <h3>PAN Services Awareness</h3>
+
+            <p>
+                Participant were guided on how to locate official
+                PAN-related online services and understand their purpose.
+                The session highlighted the importance of using trusted
+                websites when accessing PAN services.
+            </p>
+        </div>
+
+        <!-- Online Safety Training -->
+        <div class="gallery-card">
+            <img src="images/online-safety-training.jpg.jpeg"
+                 alt="Online safety awareness training session">
+
+            <h3>Online Safety and Fraud Awareness</h3>
+
+            <p>
+                Participant learned basic online safety practices,
+                including avoiding suspicious links, protecting OTPs
+                and passwords, identifying potentially fraudulent
+                messages, and using official reporting channels.
+            </p>
+        </div>
+
+    </main>
+
+    <div class="back-home">
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <footer>
+        <p>
+            Digital Seva Guide | Community Engagement Project
+        </p>
+    </footer>
+
+</body>
+</html>
